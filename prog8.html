@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // Create a Product object
+        let product = {
+            productId: 101,
+            productName: "Laptop",
+            price: 50000,
+            quantity: 2,
+
+            calculateTotalPrice: function() {
+                return this.price * this.quantity;
+            },
+
+            updateQuantity: function(newQuantity) {
+                this.quantity = newQuantity;
+            },
+
+            // Method to display all product information
+            displayInfo: function() {
+                console.log("Product ID: " + this.productId);
+                console.log("Product Name: " + this.productName);
+                console.log("Price: ₹" + this.price);
+                console.log("Quantity: " + this.quantity);
+                console.log("Total Price: ₹" + this.calculateTotalPrice());
+            }
+        };
+
+        product.displayInfo();
+
+        product.updateQuantity(5);
+        product.displayInfo();
+
+    </script>
+</body>
+</html>
