@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Objects</title>
+</head>
+<body>
+    <script>
+        let student = {
+            first:"Vikas",
+            last:"Choudhary",
+            city:"Ghaziabad",
+            pincode: 201204,
+            salary:function(){
+                document.write("Salary");
+            },
+            subject:["Web Dev","C++","Java"]
+        };
+        console.log(student.first);
+        console.log(student.last);
+        console.log(student.city);
+        student.salary();
+        console.log(student.subject[0]);
+        console.log(student.subject[1]);
+
+        function std(name, RollNumber, Pincode, City){
+            this.name = name;
+            this.RollNumber = RollNumber;
+            this.Pincode = Pincode;
+            this.city = City;
+
+            this.display = function(){
+                console.log(this.name);
+            }
+        }
+        let s1 = new std("Vikas", 101, 201301, "Modinagar");
+        let s2 = new std("Vivek", 102, 201301, "Modinagar");
+        s1.display();
+        s2.display();
+    </script>
+
+</body>
+</html>
