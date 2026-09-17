@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bank Account Management System</title>
+</head>
+<body>
+
+    <script>
+        class BankAccount {
+            constructor(accountNo, holderName, balance) {
+                this.accountNo = accountNo;
+                this.holderName = holderName;
+                this.balance = balance;
+            }
+
+            deposit(amount) {
+                this.balance += amount;
+            }
+
+            withdraw(amount) {
+                if (amount > this.balance) {
+                    console.log("Insufficient balance");
+                } else {
+                    this.balance -= amount;
+                    console.log("Withdrawn: " + amount);
+                }
+            }
+
+            displayBalance() {
+                console.log("Account No: " + this.accountNo);
+                console.log("Holder Name: " + this.holderName);
+                console.log("Balance: " + this.balance);
+            }
+
+            static bankInfo() {
+                console.log("Bank Name: ABC Bank");
+                console.log("General Banking Information: Saving Accounts");
+            }
+        }
+
+
+        BankAccount.bankInfo();
+        console.log("--- Account 1 ---");
+
+        let account1 = new BankAccount(101, "Rahul", 5000);
+
+        account1.displayBalance();
+        account1.deposit(2000);
+        account1.withdraw(1000);
+        account1.displayBalance();
+
+        console.log("--- Account 2 ---");
+
+        let account2 = new BankAccount(102, "Priya", 8000);
+
+        account2.displayBalance();
+        account2.deposit(3000);
+        account2.withdraw(12000);   
+        account2.displayBalance();
+
+    </script>
+
+</body>
+</html>
