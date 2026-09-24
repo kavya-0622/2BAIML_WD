@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        /*class Hello{
+            constructor(){
+                console.log("Hello constructor");
+            }
+        }
+
+        class Hi extends Hello{
+            constructor(){
+                super();
+                console.log("Hi constructor")
+            }
+        }
+
+        let h1 = new Hi();*/
+
+        class Hello{
+            info(){
+                console.log("info Hello")
+            }
+        }
+
+        class hi extends Hello(){
+            info(){
+                super.info();
+                console.log("info Hi")
+            }
+        }
+
+        let h1 = new Hi();
+        h1.info();
+
+    </script>
+</body>
+</html>
